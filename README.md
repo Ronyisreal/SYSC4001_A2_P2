@@ -120,7 +120,7 @@ killall part1
 ./part2
 ```
 
-**Expected Output:**
+**Output:**
 ```
 Cycle number: 0 - 0 is a multiple of 3
 Cycle number: 1
@@ -280,14 +280,6 @@ ipcs -s
 - Parts 3, 4, and 5 terminate automatically when conditions are met
 - Shared memory and semaphore keys are hardcoded (see source files)
 - Error handling is included for all system calls
-
----
-
-## References
-
-- Linux Programming Interface by Michael Kerrisk (Chapter 24, 48, 53)
-- Advanced Programming in the UNIX Environment by Stevens & Rago
-- Linux man pages: `man 2 fork`, `man 2 exec`, `man 2 wait`, `man 2 shmget`, `man 2 semget`
 
 ---
 
