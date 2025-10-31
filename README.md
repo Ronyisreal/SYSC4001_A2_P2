@@ -3,8 +3,8 @@
 **Course:** SYSC4001 - Operating Systems  
 **Assignment:** Assignment 2, Part II  
 **Students:**
-- Student 1: 101276841
-- Student 2: 101116888
+- Student 1: 101276841 Timur Grigoryev 
+- Student 2: 101116888 Rounak Mukherjee
 
 ---
 
