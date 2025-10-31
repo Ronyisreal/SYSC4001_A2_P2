@@ -1,0 +1,56 @@
+# SYSC4001 Assignment 2 - Part II
+# Students: 101276841, 101116888
+# Makefile for all parts
+
+CC = gcc
+CFLAGS = -Wall -g
+STUDENT_IDS = 101276841_101116888
+
+# All targets
+all: part1 part2 part3 part4 part5
+
+# Part 1: Basic fork
+part1: part1_$(STUDENT_IDS).c
+	$(CC) $(CFLAGS) -o part1 part1_$(STUDENT_IDS).c
+
+# Part 2: Fork with exec
+part2: part2_$(STUDENT_IDS).c part2_child_$(STUDENT_IDS).c
+	$(CC) $(CFLAGS) -o part2 part2_$(STUDENT_IDS).c
+	$(CC) $(CFLAGS) -o part2_child part2_child_$(STUDENT_IDS).c
+
+# Part 3: Fork with wait
+part3: part3_$(STUDENT_IDS).c
+	$(CC) $(CFLAGS) -o part3 part3_$(STUDENT_IDS).c
+
+# Part 4: Shared memory
+part4: part4_$(STUDENT_IDS).c part4_child_$(STUDENT_IDS).c
+	$(CC) $(CFLAGS) -o part4 part4_$(STUDENT_IDS).c
+	$(CC) $(CFLAGS) -o part4_child part4_child_$(STUDENT_IDS).c
+
+# Part 5: Semaphores
+part5: part5_$(STUDENT_IDS).c part5_child_$(STUDENT_IDS).c
+	$(CC) $(CFLAGS) -o part5 part5_$(STUDENT_IDS).c
+	$(CC) $(CFLAGS) -o part5_child part5_child_$(STUDENT_IDS).c
+
+# Clean compiled files
+clean:
+	rm -f part1 part2 part2_child part3 part4 part4_child part5 part5_child
+	rm -f *.o
+
+# Run each part
+run1: part1
+	./part1
+
+run2: part2
+	./part2
+
+run3: part3
+	./part3
+
+run4: part4
+	./part4
+
+run5: part5
+	./part5
+
+.PHONY: all clean run1 run2 run3 run4 run5
