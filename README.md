@@ -52,7 +52,7 @@ SYSC4001_A2_P2/
 
 ## Compilation
 
-### Using Makefile (Recommended)
+### Using Makefile
 ```bash
 # Compile all programs
 make -f Makefile_101276841_101116888 all
